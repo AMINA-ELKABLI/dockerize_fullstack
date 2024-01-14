@@ -1,0 +1,5 @@
+FROM eclipse-temurin:17-jdk-alpine
+MAINTAINER "aminaelkabli"
+ADD target/AFTAS-0.0.1-SNAPSHOT.jar aftas_new_v1.jar
+EXPOSE 8081
+ENTRYPOINT ["java","-jar","aftas_new_v1.jar", "--spring.profiles.active=prod"]
